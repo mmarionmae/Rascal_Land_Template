@@ -1230,6 +1230,16 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@fontsource/akaya-telivigala@^4.5.8":
+  version "4.5.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/akaya-telivigala/-/akaya-telivigala-4.5.8.tgz#51a489d7616847c37e327edac31d718ac1d7702c"
+  integrity sha512-EsKYaLE+O27wnExLfwLKdG6Xj+YSCG9kNaUEWZUarFYyX53LKBY44CRc4KEwE2S2zdzVNtddIe0k4KmIWKXT2w==
+
+"@fontsource/sora@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/sora/-/sora-4.5.10.tgz#46554a5a7bbbaa16657398f4071523228c44064a"
+  integrity sha512-hArmXtMRBOXtvY7DzSr+v0hGvRSrpYXMNOLJK/U0AJjhdS23kir+13ZV79CjwMhwsm8dfIV+YWVGDWEvlUic/w==
+
 "@humanwhocodes/config-array@^0.10.5":
   version "0.10.7"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.10.7.tgz#6d53769fd0c222767e6452e8ebda825c22e9f0dc"
