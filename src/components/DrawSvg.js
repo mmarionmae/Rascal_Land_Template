@@ -21,7 +21,8 @@ svg{
 }
 
 `
-
+const Ball = styled.div`
+`
 
 
 const DrawSvg = () => {
@@ -32,9 +33,9 @@ const DrawSvg = () => {
     let element = ref.current;
 
     let svg = document.getElementsByClassName("svg-path")[0];
+
      const length = svg.getTotalLength();
     
-     console.log(length);
     
      //start positioning of svg drawing
 
@@ -52,7 +53,7 @@ const DrawSvg = () => {
                 const draw = length * self.progress;
 
                 //also reverse the drawing when scroll goes up
-                svg.style.strokDashoffset = length - draw;
+                svg.style.strokDashoffset = length-draw;
             }
 
         }
@@ -65,9 +66,13 @@ const DrawSvg = () => {
    }, [])
 
     return (
+    <>
+        <Ball/>
         <VectorContainer ref={ref}> 
         <Vector/> 
         </VectorContainer>
+    
+    </>
     ) 
 }
 
