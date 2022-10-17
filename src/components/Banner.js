@@ -121,7 +121,7 @@ const Banner = () => {
 
             </ImgContainer>
 
-            <Title> Join the <br /> weirdos club</Title>
+            <Title> Join the <br /> Little Rascals</Title>
            
             <BtnContainer>
     
