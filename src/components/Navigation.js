@@ -43,7 +43,18 @@ cursor: pointer;
 }
 
 `
+const scrollTo = (id) => {
 
+    let element = document.getElementById(id);
+
+    element.scrollIntoView({
+
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest',
+    })
+
+}
 
 const Navigation = () => {
     return (
@@ -51,12 +62,12 @@ const Navigation = () => {
             <NavBar>
             <Logo />
             <Menu>
-                <MenuItem>Home</MenuItem>
-                <MenuItem>About</MenuItem>
-                <MenuItem>Rooadmap</MenuItem>
-                <MenuItem>Showcase</MenuItem>
-                <MenuItem>Team</MenuItem>
-                <MenuItem>Faq</MenuItem>
+                <MenuItem onClick={() => scrollTo('home')}>Home</MenuItem>
+                <MenuItem onClick={() => scrollTo('about')}>About</MenuItem>
+                <MenuItem onClick={() => scrollTo('roadmap')}>Roadmap</MenuItem>
+                <MenuItem onClick={() => scrollTo('showcase')}>Showcase</MenuItem>
+                <MenuItem onClick={() => scrollTo('team')}>Team</MenuItem>
+                <MenuItem onClick={() => scrollTo('faq')}>Faq</MenuItem>
             </Menu>
 
             <Button text = "Connect Wallet" link="https://google.com" />
