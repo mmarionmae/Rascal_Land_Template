@@ -1,8 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import Facebook from '../Icons/Facebook'
 import Banner from './Banner'
 import Logo from './Logo'
+
+import Facebook from '../Icons/Facebook'
+import Instagram from '../Icons/Instagram'
+import Twitter  from '../Icons/Twitter'
+import LinkedIn from '../Icons/LinkedIn'
 
 const Section =styled.section`
 min-height: 100vh;
@@ -26,6 +30,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 
+
 border-bottom: 1px solid ${props => props.theme.text};
 `
 
@@ -39,15 +44,54 @@ align-items: center;
 const IconList = styled.div`
 display: flex;
 align-items: center;
-margin: 0 auto;
+margin: 1rem auto;
 
 &>*{
     padding-right: 0.5rem;
-    transform: all 0.2s ease;
+    transition: all 0.2s ease;
 
     &:hover{
         transform: scale(1,2);
     }
+}
+`
+
+const MenuItems = styled.ul`
+list-style: none;
+width: 50%;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-tempate-rows: repeat(3, 1fr);
+grid-gap: 1rem;
+`
+
+const Item = styled.li`
+width: fit-content;
+cursor: pointer;
+
+&::after{
+    content: ' ';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: ${props => props.theme.body} ;
+    transition: width 0.3s ease;
+
+}
+&:hover::after{
+    width: 100%;
+}
+`
+
+const Bottom = styled.div`
+width: 75%;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+a{
+    text-decoration: underline;
 }
 `
 
@@ -60,20 +104,46 @@ const Footer = () => {
         <Left>
             <Logo/>
             <IconList>
-                <a href= "https://facebook.com" target = 'blank' rel="noopener"></a>
-                <Facebook/>
+                <a href= "http://facebook.com" target = '_blank' rel="noopener noreferrer">
+                <Facebook />
+                </a>
 
-                <a href= "https://facebook.com" target = 'blank' rel="noopener"></a>
-                <Facebook/>
+                <a href= "http://instagram.com" target = '_blank' rel="noopener noreferrer">
+                <Instagram />
+                </a>
 
-                <a href= "https://facebook.com" target = 'blank' rel="noopener"></a>
-                <Facebook/>
+               <a href= "http://twitter.com" target = '_blank' rel="noopener noreferrer">
+                <Twitter />
+                </a>
 
-                <a href= "https://facebook.com" target = 'blank' rel="noopener"></a>
-                <Facebook/>
+                <a href= "http://linkedin.com" target = '_blank' rel="noopener noreferrer">
+                <LinkedIn />
+                </a>
             </IconList>
         </Left>
+        
+        <MenuItems>
+        <Item>Home</Item>
+        <Item>About</Item>
+        <Item>Roadmap</Item>
+
+        <Item>Showcase</Item>
+        <Item>Team</Item>
+        <Item>Faq</Item>
+        </MenuItems>
+
+
         </Container>
+        <Bottom>
+            <span>
+                &copy; {new Date().getFullYear()} Rascal Land. All rights reserved.
+            </span>
+            <span>
+                Made with &#10084; by <a href="http://youtube.com/codebucks" target="_blank" rel="noopener noreferrer">
+                    Codebucks
+                </a>
+            </span>
+        </Bottom>
         </Section>
     )
 }
